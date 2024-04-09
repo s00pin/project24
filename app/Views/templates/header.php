@@ -6,6 +6,3 @@
 <body>
 
     <h1><?= esc($title) ?></h1>
-<p>This *** is the header section</p>
-<hr>
-    <br>

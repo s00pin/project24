@@ -20,7 +20,7 @@ class Media extends BaseController
             . view('templates/footer');
         }
 
-     public function show($id = null)
+     public function media_detail($id = null)
     {
         $model = model(MediaModel::class);
 
@@ -33,7 +33,7 @@ class Media extends BaseController
         $data['title'] = $data['media']['title'];
 
         return view('templates/header', $data)
-            . view('media/view',$data)
+            . view('media/movies_view',$data)
             . view('templates/footer');
     }
     

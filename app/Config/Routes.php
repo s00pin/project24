@@ -23,6 +23,7 @@ $routes->get('show', [Show::class, 'index']);
 $routes->get('show/(:segment)', [Show::class, 'show_detail']); 
 
 $routes->get('search', 'Search::index');
+$routes->get('search/searchSuggestions', 'Search::searchSuggestions');
 
 $routes->get('news', [News::class, 'index']);   
 $routes->get('news/new', [News::class, 'new']); 

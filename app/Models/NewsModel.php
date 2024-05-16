@@ -7,8 +7,8 @@ use CodeIgniter\Model;
 class NewsModel extends Model
 {
     protected $table = 'news';
-    
-    
+    protected $allowedFields = ['title', 'slug', 'body'];
+
     public function getNews($slug = false)
     {
         if ($slug === false) {
@@ -17,5 +17,14 @@ class NewsModel extends Model
 
         return $this->where(['slug' => $slug])->first();
     }
-    protected $allowedFields = ['title', 'slug', 'body'];
+
+    public function updateNews($id, $data)
+    {
+        return $this->update($id, $data);
+    }
+
+    public function deleteNews($id)
+    {
+        return $this->delete($id);
+    }
 }

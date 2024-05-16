@@ -38,6 +38,7 @@
                     <div id="watch-providers">Loading...</div>
                 </div>
             </div>
+</div>
     </div>
 </div>
 <script>
